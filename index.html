@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stop Watch and Count Down Timer</title>
+</head>
+<body>
+    <main>
+        <div class="main">
+            <section>
+                <h1 id="currentTime">00:00:00</h1>
+            </section>
+            <div class="selectType">
+                <select name="" id="ClockType">
+                    <option value="StopWatch">Stop Watch</option>
+                    <option value="CountDown">Count Down</option>
+                </select>
+            </div>
+            <section class="StopWatch">
+
+                <div class="wrap">
+                    <div id="holders">
+                        <h1>
+                            <span id="hours">00</span>
+                            <span id="minutes">00</span>
+                            <span id="seconds">00</span>
+                        </h1>
+                        <div class="btns">
+                            <button onmouseleave="Leav()"  onclick="Stt()">Start</button>
+                            <button onmouseleave="Leav()" onclick="Stp()">Stop</button>
+                            <button onmouseleave="Leav()" onclick="Rst()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="CountDown">
+                <div class="sectCount">
+                <div id="setCount">
+                </div>
+                <div class="btnAndNum">
+                    <h3>
+                        <span>Set </span>
+                        <select name="selection" id="select">
+                            <option value="Hours">Hours</option>
+                            <option value="Minutes">Minutes</option>
+                            <option value="Seconds">Seconds</option>
+                        </select>
+                    </h3>
+                    <section class="section2">
+                        <div class="wrap">
+                    
+                            <input type="text" class="txt" id="HoursTxt" placeholder="hr">
+                        <input type="text" class="txt" id="MinutesTxt" placeholder="mins">
+                        <input type="text" class="txt" id="SecondsTxt" placeholder="Secs">
+                        
+                    </section>
+                    <div class="bt">
+                    <h1>
+                            <span id="hrs2">00</span>
+                            <span id="min2">00</span>
+                            <span id="sec2">00</span>
+                            <span id="msec" class="mili">00</span>
+                        </h1>
+                        <div class="HoursBtns">
+                            <div class="btns1">
+                                    <button onmouseleave="Leav()" onclick="CHSt()">Start</button>
+                                    <button onmouseleave="Leav()" onclick="CHStp()">Stop</button>
+                                    <button onmouseleave="Leav()" onclick="CHRst()">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    <div class="MinutesBtns">
+                        <div class="btns2">
+                                <button onmouseleave="Leav()" onclick="CMSt()">Start</button>
+                                <button onmouseleave="Leav()" onclick="CHStp()">Stop</button>
+                                <button onmouseleave="Leav()" onclick="CHRst()">Reset</button>
+                        </div>
+                    </div>
+                    
+                    <div class="SecondsBtns">
+                        <div class="btns3">
+                                <button onmouseleave="Leav()" onclick="CSSt()">Start</button>
+                                <button onmouseleave="Leav()" onclick="CHStp()">Stop</button>
+                                <button onmouseleave="Leav()" onclick="CHRst()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
