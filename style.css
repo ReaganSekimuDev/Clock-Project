@@ -1,0 +1,495 @@
+html,body{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background: rgb(190, 190, 190);
+    height: 100%;
+    width: 100%;
+    position:fixed;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgb(13, 58, 103),rgb(8, 69, 66),rgb(65, 28, 124));
+    display: flex;
+}
+.main{
+    width: 100%;
+    height:50%;
+    background-color: hsl(318, 93%, 43%);
+    margin: 0 auto;
+
+}
+
+/*........................................Cureent Time.........................................*/
+
+.main section #currentTime{
+    color: white;
+    transition: all .5s;
+    text-align: center;
+    width: 40%;
+    border-radius: .5em;
+    font-size: 30px;
+    padding: 10px;
+    margin-left: 10px;
+    box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20) ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*...................................................Select-Type.....................................*/
+
+.selectType{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 3px solid transparent;
+}
+.selectType #ClockType{
+    width: 50%;
+    text-align: center;
+    background-color: navajowhite;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 1em;
+    padding: 9px;
+    font-size: 20px;
+    outline: none;
+    outline-style: none;
+    color: teal;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+}
+.selectType #ClockType option{
+    outline: none;
+    outline-style: none;
+    background-color: rgb(11, 43, 46); 
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+/*.......................................................Stop-Watch................................*/
+
+.StopWatch{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.StopWatch .wrap{
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.CountDown .sectCount .bt h1{
+    padding: 10px;
+}
+.StopWatch .wrap #holders{
+    width: 100%;
+    height: 60%;
+    border: 4px solid transparent;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.StopWatch .wrap #holders h1{
+    font-size: 45px;
+    font-weight: bolder;
+    color: white;
+}
+.StopWatch .wrap #holders h1 span{
+    font-weight: bolder;
+    border: 5px solid transparent;
+    padding: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    border-radius: .5em;
+
+}
+.StopWatch .wrap #holders .btns{
+    padding: 10px;
+    border: 2px solid transparent;
+    width: 100%;
+    text-align: center;
+    box-shadow: -10px -5px 5px 3px #173459;
+    background-color: transparent;
+}
+.StopWatch .wrap #holders .btns button{
+    padding: 8px;
+    font-size: 20px;
+    background-color: #a17f02;
+    border-radius: .5em;
+    cursor: pointer;
+    color: cyan;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .5s;
+    outline: none;
+    margin-top: 8px;
+}
+
+
+/*......................................Count Down.......................*/
+.CountDown{
+    display: none;
+}
+.CountDown .sectCount{
+    width: 100%;
+    border: none;
+    margin-top: 100px;
+    padding-top:20px;
+}
+.CountDown .sectCount .btnAndNum{
+    width: 100%;
+    height: auto;
+    align-items : center;
+    background-color: rgb(4, 69, 69);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    color: whitesmoke;
+    font-weight: bolder;
+    border: none;
+}
+.CountDown .sectCount .btnAndNum input{
+    background-color: rgb(5, 43, 58);
+    outline: none;
+    outline-style: none;
+    margin-left: 30px;
+    text-align: center;
+    border-radius: .5em;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+    transition: all .5s;
+}
+.CountDown .sectCount .btnAndNum input:hover{
+    padding: 5px;
+    outline: none;
+    outline-style: none;
+    border: none;
+    background-color: black;
+    color: aqua;
+}
+#MinutesTxt, #SecondsTxt{
+    position: relative;
+    left: 30px;
+}
+.CountDown .sectCount .btnAndNum h3{
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.CountDown .sectCount .btnAndNum h3 select{
+    background: rgb(104, 3, 80);
+    outline: none;
+    outline-style: none;
+    color: white;
+    transition: all .5s;
+    padding: 5px;
+    border-end-end-radius:1em ;
+    font-weight: bold;
+}
+.CountDown .sectCount .btnAndNum h3 select{
+    transition: all .5s;
+
+}
+.CountDown .sectCount .btnAndNum h3 select option{
+    font-weight: bold;
+    transition: all .5s;
+    color: white;
+    cursor: pointer;
+}
+.CountDown .sectCount .section2 {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(3, 48, 63);
+    
+}
+.CountDown .sectCount .bt{
+    width: 100%;
+    border: none;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    text-align: center;
+    padding: 10px;
+}
+.CountDown .sectCount .bt h1 span{
+    transition: all .5s;
+    border: 2px solid;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    text-align: center;
+    padding: 9px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: .5em;
+    font-size: 33px;
+    background:rgb(1, 38, 46);
+} 
+.HoursBtns .btns1{
+    background-color: transparent;
+    border: 3px solid transparent;
+    width: 100%;
+    position: relative;
+    right: 12px;
+    box-shadow: -10px -5px 5px 3px #173459 ;
+}
+.CountDown .sectCount .bt button {
+    padding: 10px;
+    font-size: 19px;
+    background-color: rgb(144, 6, 109);
+    margin: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 50%;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+/*......................................Alarm Section...........................................*/
+
+#AlarmSection{
+    display: none;
+    width: 100%;
+    height: 80%;
+    margin-top: 80px;
+    background-color:transparent;
+}
+#AlarmSection .Alarm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 3px solid transparent;
+    background-color: transparent;
+}
+#AlarmSection .Alarm label #alarmSong, #songg{
+    display: none;
+}
+#AlarmSection .Alarm .setTimeBox{
+    border: 3px solid transparent;
+    width: 96%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    text-align: center;
+}
+#AlarmSection .Alarm .setTimeBox input{
+    background-color: rgb(2, 30, 51);
+    width: 95%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    outline: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    border-radius: .5em;
+    font-size: 50px;
+}
+#AlarmSection .Alarm label{
+    border: 5px solid transparent;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    height: 20px;
+    position: relative;
+    top: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: .5em;
+    background-color: lch(11.65% 38.18 328.02);
+    cursor: pointer;
+}
+input[type="time"]::-webkit-calendar-picker-indicator{
+    color: white;
+    background-color: rgb(173, 96, 155);
+    cursor: pointer;
+
+}
+#AlarmSection .Alarm .setTimeBox button {
+    padding: 15px;
+    margin: 7px;
+    width: 90px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: .5em;
+    border: none;
+    background-color: #173459;
+    color: white;
+    margin-top:10px;
+    transition: all 2s;
+    text-align: center;
+}
+#AlarmSection .Alarm .setTimeBox button:hover{
+    border: none;
+    outline: none;
+    border-radius: .5em;
+}
+.MinutesBtns .btns2 {
+    border: 2px solid transparent;
+    text-align: center;
+}
+.MinutesBtns .btns2 button{
+    padding: 5px;
+    background-color: rgb(144, 6, 109);
+    margin-bottom: 5px;
+    font-size: 15px;
+    margin: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: .5em;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .5s;
+}
+.MinutesBtns .btns2 button:hover {
+    cursor: pointer;
+    background-color: rgb(101, 5, 77);
+    border: none;
+}
+.SecondsBtns .btns3 {
+    border: 2px solid none;
+    text-align: center;
+    height: 50px;
+}
+.SecondsBtns .btns3 button {
+    padding: 5px;
+    background-color: rgb(144, 6, 109);
+    font-size: 15px;
+    margin: 5px;
+    margin-bottom: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: .5em;
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .5s; 
+}
+.SecondsBtns .btns3 button:hover{
+    cursor: pointer;
+    background-color: rgb(101, 5, 77);
+    border: none;
+}
+
+.MinutesBtns{
+    display: none;
+}
+.SecondsBtns{
+    display: none;
+}
+#MinutesTxt{
+    display: none;
+}
+#SecondsTxt{
+    display: none;
+}
+
+.txt{
+    width: 30px;
+}
+
+#music{
+    display: none;
+}
+#chooseMusic{
+}
+#labelForSong{
+    background-color: rgb(34, 1, 17);
+    color: white;
+    position: relative;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    top: 85%;
+    left: 65%;
+    width: 80px;
+    padding: 8px;
+    border-radius: .5em;
+    border: 1px solid transparent;
+    transition: all .5s;
+    display: none;
+    cursor: pointer;
+}
+#labelForSong:hover{
+    border: none;
+    cursor: pointer;
+}
+#pp{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid fuchsia;
+}
+
+/*........................................Icons...........................*/
+
+.icon{
+    position: relative;
+    bottom: 350px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+#stopIcon {
+    display: block;
+}
+#countDownIcon {
+    display: none;
+}
+#alarmIcon {
+    display: none;
+}
+.iconsSlide {
+    animation-name: Slide;
+    animation-duration: .3s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes Slide{
+    from{
+        
+        left: 10px;
+    }
+    to{
+        
+        right: 10px;
+        transform: translateX("-10px");
+    }
+}
+
+#refresh{
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    bottom: 0px;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20)
+}
+#refresh:hover{
+    animation-name: refresh;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes refresh{
+    from{
+        transform: rotate(0deg);
+        width: 40px;
+        width: 40px;
+    }
+    to{
+        height: 45px;
+        transform: rotate(360deg);
+
+    }
+}
